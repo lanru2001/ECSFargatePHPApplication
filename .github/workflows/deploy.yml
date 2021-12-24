@@ -1,3 +1,4 @@
+#GitHub Action to build docker image and push image to ECR.
 name: Building an pushing to Docker registry
 
 on:
