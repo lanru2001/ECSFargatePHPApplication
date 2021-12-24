@@ -1,3 +1,4 @@
+# Docker compose to create php-fpm , nodejs app image and nginx 
 version: '3.4'
 
 services:
