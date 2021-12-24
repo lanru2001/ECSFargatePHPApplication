@@ -1,4 +1,4 @@
-# Global settings
+# Global settings and base image
 ARG PHP_VERSION=7.4
 ARG NODE_VERSION=11
 ARG NGINX_VERSION=1.17
