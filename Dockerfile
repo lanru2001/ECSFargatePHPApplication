@@ -3,6 +3,7 @@ ARG PHP_VERSION=7.4
 ARG NODE_VERSION=11
 ARG NGINX_VERSION=1.17
 
+#PHP base image 
 FROM php:${PHP_VERSION}-fpm-alpine AS laravelapp_php
 
 # persistent / runtime deps
@@ -84,6 +85,7 @@ RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["php-fpm"]
 
+#Nodejs base image 
 FROM node:${NODE_VERSION}-alpine AS laravelapp_nodejs
 
 WORKDIR /srv/laravelapp
@@ -113,7 +115,7 @@ RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["yarn", "watch"]
 
-# NGINX
+# Nginx base image
 FROM nginx:${NGINX_VERSION}-alpine AS laravelapp_nginx
 
 COPY docker/nginx/conf.d/default.conf /etc/nginx/conf.d/
