@@ -20,3 +20,13 @@ services:
         MYSQL_PASSWORD: Opensshiseverywhere!
     ports:
         - "3306:3306"
+
+  phpmyadmin:
+     image: phpmyadmin/phpmyadmin
+     ports:
+        - '8080:80'
+     restart: always
+     environment:
+        PMA_HOST: db
+     depends_on:
+        - db
