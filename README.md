@@ -11,3 +11,5 @@ Technology stack:
 - Infrastructure: Elastic Container Service (ECS) to run our containers on Docker container hosted on Amazon Elastic Container Registry (ECR)
 - Database: Amazon RDS
 - Monitoring and Logging: Amazon Cloudwatch and Datadog
+
+source: https://www.section.io/engineering-education/dockerized-php-apache-and-mysql-container-development-environment/
